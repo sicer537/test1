@@ -9,7 +9,7 @@ function slider(){
     const slideAnimationTimeout = 400 // длительность CSS-перехода
 
     function moveSlide(event) {
-        event.target.classList.add('move-top')
+        event.target.classList.add('move-left')
         setTimeout( movSlideBack, slideAnimationTimeout, event.target )
     }
     function movSlideBack(slide) {

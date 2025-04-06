@@ -1,3 +1,4 @@
+
 'use strict'
 
 function slider(){
@@ -8,7 +9,7 @@ function slider(){
     const slideAnimationTimeout = 400 // длительность CSS-перехода
 
     function moveSlide(event) {
-        event.target.classList.add('move-left')
+        event.target.classList.add('move-top')
         setTimeout( movSlideBack, slideAnimationTimeout, event.target )
     }
     function movSlideBack(slide) {
@@ -32,6 +33,11 @@ function slider(){
 }
 slider()
 function timer() {
+        const minuteMilliseconds = 1000 * 60
+        const hourMilliseconds = minuteMilliseconds * 60
+        const dayMilliseconds = hourMilliseconds * 24
+        const startsaletime = 1743930274733
+        const endSaleTime = startsaletime + dayMilliseconds * 7
     function updateSaleDate() {
         let rest = endSaleTime - Date.now()
         let days = Math.floor(rest / dayMilliseconds)
